@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+    /* Fundo preto-azulado, não é preto puro */
+    --color-background: hsl(222, 25%, 7%);
+    --color-surface: hsl(222, 22%, 11%);
+    --color-surface-alt: hsl(222, 20%, 15%);
+    --color-border: hsl(222, 15%, 22%);
+    --color-border-alt: hsl(222, 15%, 30%);
+
+    --color-gray-text: hsl(220, 10%, 55%);
+    --color-gray-light: hsl(220, 12%, 75%);
+
+    --color-text: hsl(210, 20%, 95%);
+    --color-text-secondary: hsl(215, 15%, 80%);
+    --color-text-tertiary: hsl(215, 12%, 60%);
+
+    --color-heading: hsl(210, 25%, 97%);
+
+    /* Azul elétrico como cor primária */
+    --color-primary: hsl(221, 100%, 61%);
+    --color-primary-hover: hsl(221, 100%, 50%);
+
+    /* Ciano como destaque (tags, badges) */
+    --color-accent: hsl(190, 90%, 55%);
+    --color-accent-hover: hsl(190, 90%, 45%);
+    --color-accent-light: hsl(190, 60%, 18%);
+
+    --color-link: hsl(221, 100%, 70%);
+    --color-link-hover: hsl(221, 100%, 61%);
+
+    --color-error: hsl(0, 70%, 55%);
+
+    --color-footer-bg: hsl(222, 30%, 4%);
+    --color-footer-hover: hsl(210, 20%, 90%);
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+}
