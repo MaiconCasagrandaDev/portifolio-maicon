@@ -1,6 +1,22 @@
+import { useEffect, useState } from "react";
 import minhaFoto from "../../assets/images/minha-foto.jpeg"
 
 export function Hero() {
+
+    const texto = "Desenvolvedor";
+    const [textoDigitado , setTextoDigitado] = useState("");
+
+    useEffect(() => {
+        let index = 0;
+        const intervalo = setInterval(() => {
+            setTextoDigitado(texto.slice(0, index + 1));
+            index++;
+            if (index === texto.length) clearInterval(intervalo);
+        }, 200);
+
+        return() => clearInterval(intervalo);
+    }, []);
+
     return (
         <section id="inicio" className="flex flex-col sm:flex-row items-center gap-8 sm:gap-24 pt-28 sm:pt-0 min-h-screen px-6 sm:px-12 bg-surface text-center sm:text-left">
             <div className="w-40 h-40 sm:w-64 sm:h-64 rounded-full overflow-hidden shrink-0">
@@ -12,7 +28,8 @@ export function Hero() {
                     Maicon Casagranda
                 </h1>
                 <p className="font-body text-lg sm:text-xl text-text-secondary mt-2">
-                    Desenvolvedor
+                    {textoDigitado}
+                    <span className="animate-pulse">|</span>
                 </p>
 
                 <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-6 font-body text-sm">
