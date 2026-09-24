@@ -36,6 +36,7 @@
 
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
 }
 
 @font-face {
@@ -60,4 +61,25 @@
     font-weight: 700;
     font-display: swap;
     src: url('../assets/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/IBMPlexMono-Medium.ttf') format('truetype');
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
