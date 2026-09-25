@@ -6,6 +6,7 @@ function Skills() {
     const [visivel, setVisivel] = useState(false);
 
     useEffect(() => {
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -18,7 +19,6 @@ function Skills() {
         );
 
         if (secaoRef.current) observer.observe(secaoRef.current);
-
         return () => observer.disconnect();
     }, []);
 
@@ -26,7 +26,8 @@ function Skills() {
         <section
             ref={secaoRef}
             id="skills"
-            className={`scroll-mt-20 sm:scroll-mt-24 transition-all duration-1000 ${visivel ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
+            className={`scroll-mt-20 sm:scroll-mt-24 transition-all duration-1000 ${visivel ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
+        >
 
             <div className="flex flex-col items-center text-center p-6 sm:p-10 rounded-xl border border-border bg-surface max-w-md mt-12 mx-4 sm:mx-auto">
                 <div className="flex items-center justify-center gap-4">
@@ -58,7 +59,7 @@ function Skills() {
 
             <div>
                 <p className="font-body text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto text-center mt-12 px-6">
-                    Oi, eu sou o Maicon! Atualmente estou cursando Análise e Desenvolvimento
+                    Olá, eu sou o Maicon! Atualmente estou cursando Análise e Desenvolvimento
                     de Sistemas pela UCS, e a cada dia que passa fico mais apaixonado por
                     tecnologia. Gosto de aprender coisas novas, sair da zona de conforto e
                     evoluir meus conhecimentos como desenvolvedor — sempre buscando entender
@@ -67,7 +68,7 @@ function Skills() {
             </div>
 
             <div className="mt-10 text-center">
-                <p className="font-body text-sm text-text-tertiary mb-3">Tecnnologias que já domino</p>
+                <p className="font-body text-sm text-text-tertiary mb-3">Tecnologias que já domino</p>
 
                 <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto px-6">
 

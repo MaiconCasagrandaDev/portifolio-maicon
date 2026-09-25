@@ -18,7 +18,7 @@ function Header() {
                     href="#projetos"
                     className="text-text-secondary hover:text-primary transition-colors"
                 >
-                    Projetos
+                    Projects
                 </a>
             </nav>
         </header>

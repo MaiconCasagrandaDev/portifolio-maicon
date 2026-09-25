@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import minhaFoto from "../../assets/images/minha-foto.jpeg"
 
 export function Hero() {
-
     const texto = "Desenvolvedor";
-    const [textoDigitado , setTextoDigitado] = useState("");
+    const [textoDigitado, setTextoDigitado] = useState("");
 
     useEffect(() => {
         let index = 0;
@@ -13,8 +12,7 @@ export function Hero() {
             index++;
             if (index === texto.length) clearInterval(intervalo);
         }, 200);
-
-        return() => clearInterval(intervalo);
+        return () => clearInterval(intervalo);
     }, []);
 
     return (
@@ -34,7 +32,7 @@ export function Hero() {
 
                 <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-6 font-body text-sm">
                     <a
-                        href="https://github.com/seu-usuario"
+                        href="https://github.com/MaiconCasagrandaDev"
                         target="_blank"
                         rel="noreferrer"
                         className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
@@ -43,7 +41,7 @@ export function Hero() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/seu-usuario"
+                        href="https://linkedin.com/in/maicon-casagranda-774922303/"
                         target="_blank"
                         rel="noreferrer"
                         className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
@@ -52,16 +50,26 @@ export function Hero() {
                     </a>
 
                     <a
-                        href="mailto:seuemail@email.com"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=maiconcasag@gmail.com"
+                        target="_blank"
+                        rel="noreferrer"
                         className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
                     >
                         E-mail
+                    </a>
+
+                    <a
+                        href="https://instagram.com/maicon_casagranda"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+                    >
+                        Instagram
                     </a>
                 </div>
             </div>
         </section>
     );
 }
-
 
 export default Hero;
