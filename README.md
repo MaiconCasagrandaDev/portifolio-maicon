@@ -1,32 +1,46 @@
-# React + TypeScript + Vite
+# Portfólio — Maicon Casagranda
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfólio pessoal desenvolvido para apresentar minhas habilidades, projetos e formação como desenvolvedor.
 
-Currently, two official plugins are available:
+🔗 **Acesse:** [portifolio-maicon.vercel.app](https://portifolio-maicon-ege3zx9ft-maicon99.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
 
-## React Compiler
+- React
+- TypeScript
+- Tailwind CSS
+- React Router DOM
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the Oxlint configuration
+- **Hero** — apresentação com foto, nome, cargo (efeito de digitação) e links sociais
+- **Skills** — formação acadêmica, um pouco sobre mim, tecnologias que domino e tecnologias em estudo, com animação ao rolar a página
+- **Projetos** — cards com imagem, descrição e link para o repositório de cada projeto, com efeito de clique revelando detalhes
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Rodando localmente
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Clone o repositório:
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+\`\`\`bash
+git clone https://github.com/MaiconCasagrandaDev/portifolio-maicon.git
+cd portifolio-maicon
+\`\`\`
+
+Instale as dependências:
+
+\`\`\`bash
+npm install
+\`\`\`
+
+Rode o servidor de desenvolvimento:
+
+\`\`\`bash
+npm run dev
+\`\`\`
+
+## Autor
+
+**Maicon Casagranda**
+- GitHub: [@MaiconCasagrandaDev](https://github.com/MaiconCasagrandaDev)
+- LinkedIn: [Maicon Casagranda](https://linkedin.com/in/maicon-casagranda-774922303/)
