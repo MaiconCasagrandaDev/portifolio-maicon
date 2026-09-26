@@ -2,7 +2,7 @@
 
 Portfólio pessoal desenvolvido para apresentar minhas habilidades, projetos e formação como desenvolvedor.
 
-🔗 **Acesse:** [portifolio-maicon.vercel.app](https://portifolio-maicon-ege3zx9ft-maicon99.vercel.app)
+🔗 **Acesse:** [portifolio-maicon-sepia.vercel.app](portifolio-maicon-sepia.vercel.app)
 
 ## Tecnologias
 
