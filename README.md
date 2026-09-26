@@ -22,22 +22,22 @@ Portfólio pessoal desenvolvido para apresentar minhas habilidades, projetos e f
 
 Clone o repositório:
 
-\`\`\`bash
+```bash
 git clone https://github.com/MaiconCasagrandaDev/portifolio-maicon.git
 cd portifolio-maicon
-\`\`\`
+```
 
 Instale as dependências:
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 Rode o servidor de desenvolvimento:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 ## Autor
 
