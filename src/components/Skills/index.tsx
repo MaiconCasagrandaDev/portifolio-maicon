@@ -16,8 +16,8 @@ function Skills() {
             className={`scroll-mt-20 sm:scroll-mt-24 transition-all duration-1000 ${visivel ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
         >
 
-            <CardFaculdade />
             <Sobre />
+            <CardFaculdade />
 
             <div className="mt-10 text-center">
                 <p className="font-body text-sm text-text-tertiary mb-3">Tecnologias que já domino</p>
