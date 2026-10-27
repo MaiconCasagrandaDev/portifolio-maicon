@@ -52,9 +52,6 @@ export const dominadas = [
         </svg>
         ),
     },
-];
-
-export const estudando = [
     {
         nome: "Node.js",
         cor: "#339933",
@@ -65,6 +62,9 @@ export const estudando = [
         </svg>
         ),
     },
+];
+
+export const estudando = [
     {
         nome: "Python",
         cor: "#3776AB",
