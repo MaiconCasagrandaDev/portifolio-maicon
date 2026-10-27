@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import minhaFoto from "../../assets/images/minha-foto.jpeg";
+import {
+  IconGithub,
+  IconLinkedin,
+  IconInstagram,
+  IconWhatsapp,
+  IconMail,
+} from "./icons";
 
 const mensagem = "Olá Maicon! Vi seu portfólio e gostaria de conversar.";
 const whatsappUrl = `https://wa.me/5554996229897?text=${encodeURIComponent(mensagem)}`;
+const classeBotao =
+  "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors";
 
 export function Hero() {
   const texto = "Desenvolvedor";
@@ -45,45 +54,45 @@ export function Hero() {
             href="https://github.com/MaiconCasagrandaDev"
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+            className={classeBotao}
           >
-            GitHub
+            <IconGithub /> GitHub
           </a>
 
           <a
             href="https://linkedin.com/in/maicon-casagranda-774922303/"
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+            className={classeBotao}
           >
-            LinkedIn
+            <IconLinkedin /> LinkedIn
           </a>
 
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=maiconcasag@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+            className={classeBotao}
           >
-            E-mail
+            <IconMail /> E-mail
           </a>
 
           <a
             href="https://instagram.com/maicon_casagranda"
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+            className={classeBotao}
           >
-            Instagram
+            <IconInstagram /> Instagram
           </a>
 
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+            className={classeBotao}
           >
-            WhatsApp
+            <IconWhatsapp /> WhatsApp 
           </a>
         </div>
       </div>
