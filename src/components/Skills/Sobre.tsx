@@ -8,10 +8,10 @@ export function Sobre() {
             </p>
 
             <p className="font-body text-base sm:text-lg text-text-secondary leading-relaxed text-center">
-                Hoje construo interfaces com React e TypeScript e consumo APIs nos meus
-                projetos, além de um jogo mobile em Flutter feito em equipe na faculdade.
-                No backend, estudo HTTP, SQL e Express e estou aprendendo Node.js com
-                Prisma, além de Python.
+                Construo interfaces com React e TypeScript e também desenvolvo APIs com
+                Node.js, Express, Prisma e PostgreSQL, como nos meus projetos de
+                agendamento e de atendimento pelo WhatsApp. Fiz ainda um jogo mobile em
+                Flutter, em equipe, na faculdade. Atualmente estou estudando Python e automações.
             </p>
         </div>
     );
