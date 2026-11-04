@@ -9,23 +9,27 @@ export function CardProjeto({
   titulo,
   descricao,
   tecnologias,
-  imagem,
-  ajuste = "cover",
+  imagens,
   status,
   links,
 }: Projeto) {
   return (
     <article className="flex flex-col w-full max-w-sm rounded-xl border border-border bg-surface overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary">
-      {imagem ? (
-        <img
-          src={imagem}
-          alt={`Tela do projeto ${titulo}`}
-          className={`aspect-video w-full bg-background ${
-            ajuste === "contain" ? "object-contain" : "object-cover object-top"
-          }`}
-        />
+      {imagens && imagens.length > 0 ? (
+        <div className="flex justify-center gap-4 h-72 overflow-hidden bg-background pt-6">
+          {imagens.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt={`Tela ${i + 1} do projeto ${titulo}`}
+              className={`h-80 w-auto shrink-0 rounded-t-[1.75rem] border border-b-0 border-border object-cover object-top ${
+                i % 2 === 1 ? "mt-8" : ""
+              }`}
+            />
+          ))}
+        </div>
       ) : (
-        <div className="aspect-video w-full flex items-center justify-center bg-background font-mono text-3xl text-primary">
+        <div className="h-72 w-full flex items-center justify-center bg-background font-mono text-3xl text-primary">
           {"</>"}
         </div>
       )}

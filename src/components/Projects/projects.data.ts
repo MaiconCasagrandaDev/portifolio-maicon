@@ -1,13 +1,19 @@
-import brickBreaker from "../../assets/images/brick-breaker.png";
-import github from "../../assets/images/github.png";
-import ghibli from "../../assets/images/studio-ghibli.png";
+import agendaServicos from "../../assets/images/agendamento-manicure.png";
+import agendaAdmin from "../../assets/images/agendamento-admin.png";
+import ghibliLista from "../../assets/images/visualizador-filmes-ghibli.png";
+import ghibliDetalhes from "../../assets/images/visualizador-filmes-ghibli-detalhes.png";
+import githubBusca from "../../assets/images/visualizador-perfil-github.png";
+import githubResultado from "../../assets/images/visualizador-perfil-github-resultado.png";
+import brickInicial from "../../assets/images/brick-breaker-tela-inicial.png";
+import brickJogo from "../../assets/images/brick-breaker-jogo.png";
+import atendenteCardapio from "../../assets/images/cardapio.png";
+import atendenteConversa from "../../assets/images/conversa.png";
 
 export type Projeto = {
   titulo: string;
   descricao: string;
   tecnologias: string[];
-  imagem?: string;
-  ajuste?: "cover" | "contain";
+  imagens?: string[];
   status?: "online" | "desenvolvimento";
   links: { rotulo: string; url: string; destaque?: boolean }[];
 };
@@ -18,6 +24,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Agendamento online para um estúdio de manicure. A cliente escolhe serviços e horários livres pelo celular, e a profissional aprova pedidos, vê a agenda e bloqueia horários num painel.",
     tecnologias: ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL"],
+    imagens: [agendaServicos, agendaAdmin],
     status: "desenvolvimento",
     links: [
       { rotulo: "Front-end", url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-web" },
@@ -29,8 +36,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Catálogo dos filmes do Studio Ghibli com busca por título, ordenação e página de detalhes de cada filme, consumindo uma API pública.",
     tecnologias: ["React", "TypeScript", "React Router", "Tailwind CSS"],
-    imagem: ghibli,
-    ajuste: "contain",
+    imagens: [ghibliLista, ghibliDetalhes],
     status: "online",
     links: [
       {
@@ -46,6 +52,7 @@ export const projetos: Projeto[] = [
     descricao:
       "API de pedidos para um atendente virtual no WhatsApp. Já tem cardápio, carrinho por cliente e fluxo de status do pedido. A integração com o WhatsApp e a IA estão em andamento.",
     tecnologias: ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
+    imagens: [atendenteConversa, atendenteCardapio],
     status: "desenvolvimento",
     links: [
       { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/atendente-digital" },
@@ -56,8 +63,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Busca um usuário do GitHub e mostra seus dados e repositórios, consumindo a API oficial do GitHub.",
     tecnologias: ["JavaScript", "API do GitHub"],
-    imagem: github,
-    ajuste: "contain",
+    imagens: [githubBusca, githubResultado],
     links: [
       { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/visualizador-perfil-github" },
     ],
@@ -67,8 +73,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Jogo mobile para Android desenvolvido em equipe com colegas da faculdade.",
     tecnologias: ["Flutter", "Dart"],
-    imagem: brickBreaker,
-    ajuste: "contain",
+    imagens: [brickInicial, brickJogo],
     links: [
       { rotulo: "Código", url: "https://github.com/julia-maia/brick-breaker" },
     ],
