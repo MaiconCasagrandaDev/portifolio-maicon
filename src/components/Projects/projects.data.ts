@@ -22,8 +22,8 @@ export const projetos: Projeto[] = [
   {
     titulo: "Atendente Digital",
     descricao:
-      "API de pedidos para um atendente virtual no WhatsApp. Já tem cardápio, carrinho por cliente e fluxo de status do pedido. A integração com o WhatsApp e a IA estão em andamento.",
-    tecnologias: ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
+      "Atendente virtual com IA para lanchonetes: entende o pedido em texto livre, consulta o cardápio real no banco e salva o pedido. Inclui cardápio digital e simulador de conversa. O envio pelo WhatsApp está em integração.",
+    tecnologias: ["Node.js", "TypeScript", "Express", "Prisma", "PostgreSQL", "Gemini API", "WhatsApp API"],
     imagens: [atendenteConversa, atendenteCardapio],
     status: "desenvolvimento",
     links: [
