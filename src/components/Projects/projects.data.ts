@@ -20,6 +20,17 @@ export type Projeto = {
 
 export const projetos: Projeto[] = [
   {
+    titulo: "Atendente Digital",
+    descricao:
+      "API de pedidos para um atendente virtual no WhatsApp. Já tem cardápio, carrinho por cliente e fluxo de status do pedido. A integração com o WhatsApp e a IA estão em andamento.",
+    tecnologias: ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
+    imagens: [atendenteConversa, atendenteCardapio],
+    status: "desenvolvimento",
+    links: [
+      { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/atendente-digital" },
+    ],
+  },
+  {
     titulo: "Agenda Manicure",
     descricao:
       "Agendamento online para um estúdio de manicure. A cliente escolhe serviços e horários livres pelo celular, e a profissional aprova pedidos, vê a agenda e bloqueia horários num painel.",
@@ -29,6 +40,16 @@ export const projetos: Projeto[] = [
     links: [
       { rotulo: "Front-end", url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-web" },
       { rotulo: "API", url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-api" },
+    ],
+  },
+  {
+    titulo: "Brick Breaker",
+    descricao:
+      "Jogo mobile para Android desenvolvido em equipe com colegas da faculdade.",
+    tecnologias: ["Flutter", "Dart"],
+    imagens: [brickInicial, brickJogo],
+    links: [
+      { rotulo: "Código", url: "https://github.com/julia-maia/brick-breaker" },
     ],
   },
   {
@@ -48,17 +69,6 @@ export const projetos: Projeto[] = [
     ],
   },
   {
-    titulo: "Atendente Digital",
-    descricao:
-      "API de pedidos para um atendente virtual no WhatsApp. Já tem cardápio, carrinho por cliente e fluxo de status do pedido. A integração com o WhatsApp e a IA estão em andamento.",
-    tecnologias: ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
-    imagens: [atendenteConversa, atendenteCardapio],
-    status: "desenvolvimento",
-    links: [
-      { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/atendente-digital" },
-    ],
-  },
-  {
     titulo: "Visualizador de Perfil do GitHub",
     descricao:
       "Busca um usuário do GitHub e mostra seus dados e repositórios, consumindo a API oficial do GitHub.",
@@ -66,16 +76,6 @@ export const projetos: Projeto[] = [
     imagens: [githubBusca, githubResultado],
     links: [
       { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/visualizador-perfil-github" },
-    ],
-  },
-  {
-    titulo: "Brick Breaker",
-    descricao:
-      "Jogo mobile para Android desenvolvido em equipe com colegas da faculdade.",
-    tecnologias: ["Flutter", "Dart"],
-    imagens: [brickInicial, brickJogo],
-    links: [
-      { rotulo: "Código", url: "https://github.com/julia-maia/brick-breaker" },
     ],
   },
 ];
