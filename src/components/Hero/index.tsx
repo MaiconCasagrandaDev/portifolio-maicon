@@ -69,9 +69,7 @@ export function Hero() {
           </a>
 
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=maiconcasag@gmail.com"
-            target="_blank"
-            rel="noreferrer"
+            href={`mailto:maiconcasag@gmail.com?subject=${encodeURIComponent("Contato pelo portfólio")}`}
             className={classeBotao}
           >
             <IconMail /> E-mail
