@@ -22,11 +22,13 @@ export const projetos: Projeto[] = [
   {
     titulo: "Atendente Digital",
     descricao:
-      "Atendente virtual com IA para lanchonetes: entende o pedido em texto livre, consulta o cardápio real no banco e salva o pedido. Inclui cardápio digital e simulador de conversa. O envio pelo WhatsApp está em integração.",
+      "Atendente virtual com IA para lanchonetes. O cliente conversa com a IA, que mostra o cardápio, calcula o total e salva o pedido, com avisos de cada etapa. Teste a conversa no simulador. O envio pelo WhatsApp oficial aguarda liberação da Meta.",
     tecnologias: ["Node.js", "TypeScript", "Express", "Prisma", "PostgreSQL", "Gemini API", "WhatsApp API"],
-    imagens: [atendenteConversa, atendenteCardapio],
-    status: "desenvolvimento",
+    imagens: [atendenteCardapio, atendenteConversa],
+    status: "online",
     links: [
+      { rotulo: "Testar conversa", url: "https://atendente-digital.onrender.com/simulador", destaque: true },
+      { rotulo: "Cardápio", url: "https://atendente-digital.onrender.com/cardapio" },
       { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/atendente-digital" },
     ],
   },
