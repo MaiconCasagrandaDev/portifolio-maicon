@@ -64,17 +64,11 @@ export const dominadas = [
     },
 ];
 
-export const estudando = [
-    {
-        nome: "Python",
-        cor: "#3776AB",
-        icone: (
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 3H9a3 3 0 0 0-3 3v4h8v1" stroke="#3776AB" />
-            <path d="M6 10H5a2 2 0 0 0-2 2v2a3 3 0 0 0 3 3h2" stroke="#3776AB" />
-            <path d="M12 21h3a3 3 0 0 0 3-3v-4h-8v-1" stroke="#FFD43B" />
-            <path d="M18 14h1a2 2 0 0 0 2-2v-2a3 3 0 0 0-3-3h-2" stroke="#FFD43B" />
-        </svg>
-        ),
-    },
+export const tambemUso = [
+    { titulo: "Front-end", itens: ["Tailwind CSS", "React Router", "Vite"] },
+    { titulo: "Back-end e banco", itens: ["Express", "PostgreSQL", "Prisma", "APIs REST", "Zod"] },
+    { titulo: "IA e integrações", itens: ["Gemini API", "WhatsApp Cloud API"] },
+    { titulo: "Ferramentas", itens: ["Git", "GitHub", "Vercel", "Render"] },
+    { titulo: "Noções", itens: ["Flutter", "Dart"] },
+    { titulo: "Estudando", itens: ["Python"] },
 ];

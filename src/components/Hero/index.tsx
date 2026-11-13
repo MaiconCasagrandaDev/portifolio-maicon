@@ -30,7 +30,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="flex flex-col sm:flex-row items-center gap-8 sm:gap-24 pt-28 sm:pt-0 min-h-screen px-6 sm:px-12 bg-surface text-center sm:text-left"
+      className="flex flex-col sm:flex-row items-center gap-8 sm:gap-24 pt-48 sm:pt-0 min-h-screen px-6 sm:px-12 bg-surface text-center sm:text-left"
     >
       <div className="w-40 h-40 sm:w-64 sm:h-64 rounded-full overflow-hidden shrink-0">
         <img

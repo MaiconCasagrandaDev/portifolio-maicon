@@ -1,8 +1,9 @@
-import { dominadas, estudando } from "./Skills.data";
+import { dominadas } from "./Skills.data";
 import { CardSkill } from "./CardSkills";
 import { useAparecer } from "../../hooks/useAparecer";
 import { CardFaculdade } from "./CardFaculdade";
 import { Sobre } from "./Sobre";
+import { TambemUso } from "./TambemUso";
 
 
 function Skills() {
@@ -22,22 +23,14 @@ function Skills() {
             <div className="mt-10 text-center">
                 <p className="font-body text-sm text-text-tertiary mb-3">Tecnologias que já domino</p>
 
-                <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto px-6">
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-2xl mx-4 sm:mx-auto">
                     {dominadas.map((skill) => (
                         <CardSkill key={skill.nome} {...skill} />
                     ))}
                 </div>
             </div>
 
-            <div className="mt-8 text-center">
-                <p className="font-body text-sm text-text-tertiary mb-3">Estudando Atualmente</p>
-
-                <div className="flex flex-wrap justify-center gap-4">
-                    {estudando.map((skill) => (
-                        <CardSkill key={skill.nome} {...skill} />
-                    ))}
-                </div>
-            </div>
+            <TambemUso />
 
         </section>
     )
