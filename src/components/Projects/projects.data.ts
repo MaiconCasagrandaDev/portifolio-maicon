@@ -45,16 +45,6 @@ export const projetos: Projeto[] = [
     ],
   },
   {
-    titulo: "Brick Breaker",
-    descricao:
-      "Jogo mobile para Android desenvolvido em equipe com colegas da faculdade.",
-    tecnologias: ["Flutter", "Dart"],
-    imagens: [brickInicial, brickJogo],
-    links: [
-      { rotulo: "Código", url: "https://github.com/julia-maia/brick-breaker" },
-    ],
-  },
-  {
     titulo: "Visualizador de Filmes Ghibli",
     descricao:
       "Catálogo dos filmes do Studio Ghibli com busca por título, ordenação e página de detalhes de cada filme, consumindo uma API pública.",
@@ -68,6 +58,16 @@ export const projetos: Projeto[] = [
         destaque: true,
       },
       { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/visualizador-filmes-ghibli" },
+    ],
+  },
+  {
+    titulo: "Brick Breaker",
+    descricao:
+      "Jogo mobile para Android desenvolvido em equipe com colegas da faculdade.",
+    tecnologias: ["Flutter", "Dart"],
+    imagens: [brickInicial, brickJogo],
+    links: [
+      { rotulo: "Código", url: "https://github.com/julia-maia/brick-breaker" },
     ],
   },
   {

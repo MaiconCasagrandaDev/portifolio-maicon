@@ -14,7 +14,7 @@ export function CardProjeto({
   links,
 }: Projeto) {
   return (
-    <article className="flex flex-col w-full max-w-sm rounded-xl border border-border bg-surface overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary">
+    <article className="flex flex-col shrink-0 snap-start w-[88%] sm:w-[55%] md:w-[44%] lg:w-[30%] rounded-xl border border-border bg-surface overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary">
       {imagens && imagens.length > 0 ? (
         <div className="flex justify-center gap-4 h-72 overflow-hidden bg-background pt-6">
           {imagens.map((src, i) => (
