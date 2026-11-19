@@ -30,6 +30,8 @@
     --color-link-hover: hsl(221, 100%, 61%);
 
     --color-error: hsl(0, 70%, 55%);
+    --color-success: hsl(160, 70%, 50%);
+    --color-warning: hsl(40, 95%, 58%);
 
     --color-footer-bg: hsl(222, 30%, 4%);
     --color-footer-hover: hsl(210, 20%, 90%);
@@ -37,6 +39,47 @@
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+
+    --color-background: hsl(214, 24%, 93%);
+    --color-surface: hsl(0, 0%, 100%);
+    --color-surface-alt: hsl(214, 22%, 89%);
+    --color-border: hsl(214, 18%, 78%);
+    --color-border-alt: hsl(214, 16%, 66%);
+
+    --color-gray-text: hsl(220, 10%, 38%);
+    --color-gray-light: hsl(220, 12%, 38%);
+
+    --color-text: hsl(222, 25%, 14%);
+    --color-text-secondary: hsl(220, 15%, 28%);
+    --color-text-tertiary: hsl(220, 12%, 36%);
+
+    --color-heading: hsl(222, 35%, 8%);
+
+    --color-primary: hsl(221, 85%, 50%);
+    --color-primary-hover: hsl(221, 90%, 42%);
+
+    --color-accent: hsl(195, 90%, 32%);
+    --color-accent-hover: hsl(195, 90%, 26%);
+    --color-accent-light: hsl(190, 70%, 92%);
+
+    --color-link: hsl(221, 85%, 45%);
+    --color-link-hover: hsl(221, 90%, 36%);
+
+    --color-error: hsl(0, 70%, 45%);
+
+    --color-footer-bg: hsl(214, 25%, 90%);
+    --color-footer-hover: hsl(222, 30%, 15%);
+
+    --color-success: hsl(160, 80%, 25%);
+    --color-warning: hsl(35, 90%, 30%);
 }
 
 @font-face {
