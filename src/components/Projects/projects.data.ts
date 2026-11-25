@@ -1,13 +1,13 @@
-import agendaServicos from "../../assets/images/agendamento-manicure.png";
-import agendaAdmin from "../../assets/images/agendamento-admin.png";
-import ghibliLista from "../../assets/images/visualizador-filmes-ghibli.png";
-import ghibliDetalhes from "../../assets/images/visualizador-filmes-ghibli-detalhes.png";
-import githubBusca from "../../assets/images/visualizador-perfil-github.png";
-import githubResultado from "../../assets/images/visualizador-perfil-github-resultado.png";
-import brickInicial from "../../assets/images/brick-breaker-tela-inicial.png";
-import brickJogo from "../../assets/images/brick-breaker-jogo.png";
-import atendenteCardapio from "../../assets/images/cardapio.png";
-import atendenteConversa from "../../assets/images/conversa.png";
+import agendaServicos from "../../assets/images/agendamento-manicure.webp";
+import agendaAdmin from "../../assets/images/agendamento-admin.webp";
+import ghibliLista from "../../assets/images/visualizador-filmes-ghibli.webp";
+import ghibliDetalhes from "../../assets/images/visualizador-filmes-ghibli-detalhes.webp";
+import githubBusca from "../../assets/images/visualizador-perfil-github.webp";
+import githubResultado from "../../assets/images/visualizador-perfil-github-resultado.webp";
+import brickInicial from "../../assets/images/brick-breaker-tela-inicial.webp";
+import brickJogo from "../../assets/images/brick-breaker-jogo.webp";
+import atendenteCardapio from "../../assets/images/cardapio.webp";
+import atendenteConversa from "../../assets/images/conversa.webp";
 
 export type Projeto = {
   titulo: string;
