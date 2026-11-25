@@ -1,8 +1,8 @@
 import type { Projeto } from "./projects.data";
 
 const etiquetas = {
-  online: { texto: "Online", classe: "border-emerald-500/40 text-emerald-400" },
-  desenvolvimento: { texto: "Em desenvolvimento", classe: "border-amber-500/40 text-amber-400" },
+  online: { texto: "Online", classe: "border-success/40 text-success" },
+  desenvolvimento: { texto: "Em desenvolvimento", classe: "border-warning/40 text-warning" },
 };
 
 export function CardProjeto({
