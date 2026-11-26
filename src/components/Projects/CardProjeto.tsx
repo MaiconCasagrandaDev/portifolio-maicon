@@ -22,6 +22,10 @@ export function CardProjeto({
               key={src}
               src={src}
               alt={`Tela ${i + 1} do projeto ${titulo}`}
+              width={393}
+              height={852}
+              loading="lazy"
+              decoding="async"
               className={`h-80 w-auto shrink-0 rounded-t-[1.75rem] border border-b-0 border-border object-cover object-top ${
                 i % 2 === 1 ? "mt-8" : ""
               }`}
