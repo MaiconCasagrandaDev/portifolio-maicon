@@ -1,27 +1,56 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { projetos } from "./projects.data";
 import { CardProjeto } from "./CardProjeto";
 
 const classeSeta =
-  "hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full border border-border bg-background/90 backdrop-blur shadow-lg text-text-secondary transition-colors hover:border-primary hover:text-primary disabled:opacity-0 disabled:pointer-events-none cursor-pointer";
+  "hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full border border-border bg-background/90 backdrop-blur shadow-lg text-text-secondary transition-colors hover:border-primary hover:text-primary cursor-pointer";
+
+// Distância entre o primeiro card de um conjunto e o primeiro card do conjunto seguinte
+function larguraDoConjunto(faixa: HTMLElement, total: number) {
+  const cards = faixa.querySelectorAll<HTMLElement>("article");
+  if (cards.length <= total) return 0;
+  return cards[total].offsetLeft - cards[0].offsetLeft;
+}
 
 function Projects() {
   const faixa = useRef<HTMLDivElement>(null);
-  const [noInicio, setNoInicio] = useState(true);
-  const [noFim, setNoFim] = useState(false);
+  const timer = useRef<number | undefined>(undefined);
 
-  const atualizar = useCallback(() => {
+  const irParaOMeio = useCallback(() => {
     const el = faixa.current;
     if (!el) return;
-    setNoInicio(el.scrollLeft <= 4);
-    setNoFim(el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+    const largura = larguraDoConjunto(el, projetos.length);
+    if (largura) el.scrollTo({ left: largura, behavior: "instant" });
   }, []);
 
+  // Começa no conjunto do meio, antes de a tela ser pintada
+  useLayoutEffect(() => {
+    irParaOMeio();
+  }, [irParaOMeio]);
+
   useEffect(() => {
-    atualizar();
-    window.addEventListener("resize", atualizar);
-    return () => window.removeEventListener("resize", atualizar);
-  }, [atualizar]);
+    window.addEventListener("resize", irParaOMeio);
+    return () => window.removeEventListener("resize", irParaOMeio);
+  }, [irParaOMeio]);
+
+  // Quando a rolagem para, volta para o conjunto do meio sem que se note
+  function corrigirPosicao() {
+    const el = faixa.current;
+    if (!el) return;
+    const largura = larguraDoConjunto(el, projetos.length);
+    if (!largura) return;
+
+    if (el.scrollLeft < largura - 4) {
+      el.scrollTo({ left: el.scrollLeft + largura, behavior: "instant" });
+    } else if (el.scrollLeft >= largura * 2 - 4) {
+      el.scrollTo({ left: el.scrollLeft - largura, behavior: "instant" });
+    }
+  }
+
+  function aoRolar() {
+    window.clearTimeout(timer.current);
+    timer.current = window.setTimeout(corrigirPosicao, 120);
+  }
 
   function rolar(direcao: 1 | -1) {
     const el = faixa.current;
@@ -40,7 +69,6 @@ function Projects() {
           type="button"
           aria-label="Projetos anteriores"
           onClick={() => rolar(-1)}
-          disabled={noInicio}
           className={`${classeSeta} left-2`}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -52,7 +80,6 @@ function Projects() {
           type="button"
           aria-label="Próximos projetos"
           onClick={() => rolar(1)}
-          disabled={noFim}
           className={`${classeSeta} right-2`}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,11 +89,15 @@ function Projects() {
 
         <div
           ref={faixa}
-          onScroll={atualizar}
+          onScroll={aoRolar}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth scroll-pl-6 px-6 pt-2 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {projetos.map((projeto) => (
-            <CardProjeto key={projeto.titulo} {...projeto} />
+          {[0, 1, 2].map((copia) => (
+            <div key={copia} className="contents" aria-hidden={copia !== 1}>
+              {projetos.map((projeto) => (
+                <CardProjeto key={projeto.titulo} {...projeto} />
+              ))}
+            </div>
           ))}
         </div>
       </div>
