@@ -8,6 +8,8 @@ import brickInicial from "../../assets/images/brick-breaker-tela-inicial.webp";
 import brickJogo from "../../assets/images/brick-breaker-jogo.webp";
 import atendenteCardapio from "../../assets/images/cardapio.webp";
 import atendenteConversa from "../../assets/images/conversa.webp";
+import kurioInicio from "../../assets/images/inicio-nft.webp";
+import kurioCarrinho from "../../assets/images/carrinho-nft.webp";
 
 export type Projeto = {
   titulo: string;
@@ -23,25 +25,82 @@ export const projetos: Projeto[] = [
     titulo: "Atendente Digital",
     descricao:
       "Atendente virtual com IA para lanchonetes. O cliente conversa com a IA, que mostra o cardápio, calcula o total e salva o pedido, com avisos de cada etapa. Teste a conversa no simulador. O envio pelo WhatsApp oficial aguarda liberação da Meta.",
-    tecnologias: ["Node.js", "TypeScript", "Express", "Prisma", "PostgreSQL", "Gemini API", "WhatsApp API"],
+    tecnologias: [
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Gemini API",
+      "WhatsApp API",
+    ],
     imagens: [atendenteCardapio, atendenteConversa],
     status: "online",
     links: [
-      { rotulo: "Testar conversa", url: "https://atendente-digital.onrender.com/simulador", destaque: true },
-      { rotulo: "Cardápio", url: "https://atendente-digital.onrender.com/cardapio" },
-      { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/atendente-digital" },
+      {
+        rotulo: "Testar conversa",
+        url: "https://atendente-digital.onrender.com/simulador",
+        destaque: true,
+      },
+      {
+        rotulo: "Cardápio",
+        url: "https://atendente-digital.onrender.com/cardapio",
+      },
+      {
+        rotulo: "Código",
+        url: "https://github.com/MaiconCasagrandaDev/atendente-digital",
+      },
     ],
   },
   {
     titulo: "Agenda Manicure",
     descricao:
       "Agendamento online para um estúdio de manicure. A cliente escolhe serviços e horários livres pelo celular, e a profissional aprova pedidos, vê a agenda e bloqueia horários num painel.",
-    tecnologias: ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL"],
+    tecnologias: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+    ],
     imagens: [agendaServicos, agendaAdmin],
     status: "desenvolvimento",
     links: [
-      { rotulo: "Front-end", url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-web" },
-      { rotulo: "API", url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-api" },
+      {
+        rotulo: "Front-end",
+        url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-web",
+      },
+      {
+        rotulo: "API",
+        url: "https://github.com/MaiconCasagrandaDev/agenda-manicure-api",
+      },
+    ],
+  },
+  {
+    titulo: "Kurio, marketplace de NFTs",
+    descricao:
+      "Marketplace de NFTs com catálogo (busca, filtros e paginação na URL), página de detalhes, carrinho, compra e preços em tempo real. API e WebSocket simulados com MSW, e 16 testes E2E com Playwright.",
+    tecnologias: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Socket.IO",
+      "Playwright",
+    ],
+    imagens: [kurioInicio, kurioCarrinho],
+    status: "online",
+    links: [
+      {
+        rotulo: "Ver online",
+        url: "https://nft-marketplace-maicon99.vercel.app/",
+        destaque: true,
+      },
+      {
+        rotulo: "Código",
+        url: "https://github.com/MaiconCasagrandaDev/nft-marketplace",
+      },
     ],
   },
   {
@@ -57,7 +116,10 @@ export const projetos: Projeto[] = [
         url: "https://maiconcasagrandadev.github.io/visualizador-filmes-ghibli/",
         destaque: true,
       },
-      { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/visualizador-filmes-ghibli" },
+      {
+        rotulo: "Código",
+        url: "https://github.com/MaiconCasagrandaDev/visualizador-filmes-ghibli",
+      },
     ],
   },
   {
@@ -77,7 +139,10 @@ export const projetos: Projeto[] = [
     tecnologias: ["JavaScript", "API do GitHub"],
     imagens: [githubBusca, githubResultado],
     links: [
-      { rotulo: "Código", url: "https://github.com/MaiconCasagrandaDev/visualizador-perfil-github" },
+      {
+        rotulo: "Código",
+        url: "https://github.com/MaiconCasagrandaDev/visualizador-perfil-github",
+      },
     ],
   },
 ];
