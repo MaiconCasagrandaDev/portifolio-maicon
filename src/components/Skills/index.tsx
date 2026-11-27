@@ -1,7 +1,6 @@
 import { dominadas } from "./Skills.data";
 import { CardSkill } from "./CardSkills";
 import { useAparecer } from "../../hooks/useAparecer";
-import { CardFaculdade } from "./CardFaculdade";
 import { Sobre } from "./Sobre";
 import { TambemUso } from "./TambemUso";
 
@@ -18,7 +17,6 @@ function Skills() {
         >
 
             <Sobre />
-            <CardFaculdade />
 
             <div className="mt-10 text-center">
                 <p className="font-body text-sm text-text-tertiary mb-3">Tecnologias que já domino</p>
