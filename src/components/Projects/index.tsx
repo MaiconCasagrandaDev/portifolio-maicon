@@ -28,9 +28,20 @@ function Projects() {
     irParaOMeio();
   }, [irParaOMeio]);
 
+  const larguraJanela = useRef(0);
+
   useEffect(() => {
-    window.addEventListener("resize", irParaOMeio);
-    return () => window.removeEventListener("resize", irParaOMeio);
+    larguraJanela.current = window.innerWidth;
+
+    function aoRedimensionar() {
+      // Barra de endereço aparecendo ou sumindo muda só a altura: ignora
+      if (window.innerWidth === larguraJanela.current) return;
+      larguraJanela.current = window.innerWidth;
+      irParaOMeio();
+    }
+
+    window.addEventListener("resize", aoRedimensionar);
+    return () => window.removeEventListener("resize", aoRedimensionar);
   }, [irParaOMeio]);
 
   // Quando a rolagem para, volta para o conjunto do meio sem que se note
