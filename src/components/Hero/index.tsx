@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useDigitando } from "../../hooks/useDigitando";
 import minhaFoto from "../../assets/images/minha-foto.jpeg";
 import {
   IconGithub,
@@ -13,19 +13,15 @@ const whatsappUrl = `https://wa.me/5554996229897?text=${encodeURIComponent(mensa
 const classeBotao =
   "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors";
 
-export function Hero() {
-  const texto = "Desenvolvedor";
-  const [textoDigitado, setTextoDigitado] = useState("");
+const frases = [
+  "Desenvolvedor web",
+  "Criador de sites e sistemas",
+  "Atendentes virtuais com IA",
+  "Automações para o seu negócio",
+];
 
-  useEffect(() => {
-    let index = 0;
-    const intervalo = setInterval(() => {
-      setTextoDigitado(texto.slice(0, index + 1));
-      index++;
-      if (index === texto.length) clearInterval(intervalo);
-    }, 200);
-    return () => clearInterval(intervalo);
-  }, []);
+export function Hero() {
+  const textoDigitado = useDigitando(frases);
 
   return (
     <section
