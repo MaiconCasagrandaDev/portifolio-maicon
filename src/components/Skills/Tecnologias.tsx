@@ -9,6 +9,7 @@ const areas = [
             { nome: "Tailwind CSS", descricao: "Estilo responsivo e tema claro/escuro" },
             { nome: "React Router", descricao: "Navegação entre páginas" },
             { nome: "TanStack Query e Socket.IO", descricao: "Dados do servidor e tempo real" },
+            { nome: "Flutter e Dart", descricao: "Noções de apps mobile" },
         ],
     },
     {
@@ -19,6 +20,7 @@ const areas = [
             { nome: "PostgreSQL e Prisma", descricao: "Banco de dados e modelagem" },
             { nome: "APIs REST", descricao: "Comunicação entre sistemas" },
             { nome: "Zod", descricao: "Validação de dados" },
+            { nome: "Python", descricao: "Automações" },
         ],
     },
     {
