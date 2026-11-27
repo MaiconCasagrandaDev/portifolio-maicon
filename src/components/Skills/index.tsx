@@ -1,8 +1,6 @@
-import { dominadas } from "./Skills.data";
-import { CardSkill } from "./CardSkills";
 import { useAparecer } from "../../hooks/useAparecer";
 import { Sobre } from "./Sobre";
-import { TambemUso } from "./TambemUso";
+import { Tecnologias } from "./Tecnologias";
 
 
 function Skills() {
@@ -17,18 +15,7 @@ function Skills() {
         >
 
             <Sobre />
-
-            <div className="mt-10 text-center">
-                <p className="font-body text-sm text-text-tertiary mb-3">Tecnologias que já domino</p>
-
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-2xl mx-4 sm:mx-auto">
-                    {dominadas.map((skill) => (
-                        <CardSkill key={skill.nome} {...skill} />
-                    ))}
-                </div>
-            </div>
-
-            <TambemUso />
+            <Tecnologias />
 
         </section>
     )
