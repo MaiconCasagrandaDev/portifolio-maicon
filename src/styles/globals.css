@@ -1,128 +1,211 @@
 @import "tailwindcss";
 
 @theme {
-    /* Fundo preto-azulado, não é preto puro */
-    --color-background: hsl(222, 25%, 7%);
-    --color-surface: hsl(222, 22%, 11%);
-    --color-surface-alt: hsl(222, 20%, 15%);
-    --color-border: hsl(222, 15%, 22%);
-    --color-border-alt: hsl(222, 15%, 30%);
+  /* Fundo preto-azulado, não é preto puro */
+  --color-background: hsl(222, 25%, 7%);
+  --color-surface: hsl(222, 22%, 11%);
+  --color-surface-alt: hsl(222, 20%, 15%);
+  --color-border: hsl(222, 15%, 22%);
+  --color-border-alt: hsl(222, 15%, 30%);
 
-    --color-gray-text: hsl(220, 10%, 55%);
-    --color-gray-light: hsl(220, 12%, 75%);
+  --color-gray-text: hsl(220, 10%, 55%);
+  --color-gray-light: hsl(220, 12%, 75%);
 
-    --color-text: hsl(210, 20%, 95%);
-    --color-text-secondary: hsl(215, 15%, 80%);
-    --color-text-tertiary: hsl(215, 12%, 60%);
+  --color-text: hsl(210, 20%, 95%);
+  --color-text-secondary: hsl(215, 15%, 80%);
+  --color-text-tertiary: hsl(215, 12%, 60%);
 
-    --color-heading: hsl(210, 25%, 97%);
+  --color-heading: hsl(210, 25%, 97%);
 
-    /* Azul elétrico como cor primária */
-    --color-primary: hsl(221, 100%, 61%);
-    --color-primary-hover: hsl(221, 100%, 50%);
+  /* Azul elétrico como cor primária */
+  --color-primary: hsl(221, 100%, 61%);
+  --color-primary-hover: hsl(221, 100%, 50%);
 
-    /* Ciano como destaque (tags, badges) */
-    --color-accent: hsl(190, 90%, 55%);
-    --color-accent-hover: hsl(190, 90%, 45%);
-    --color-accent-light: hsl(190, 60%, 18%);
+  /* Ciano como destaque (tags, badges) */
+  --color-accent: hsl(190, 90%, 55%);
+  --color-accent-hover: hsl(190, 90%, 45%);
+  --color-accent-light: hsl(190, 60%, 18%);
 
-    --color-link: hsl(221, 100%, 70%);
-    --color-link-hover: hsl(221, 100%, 61%);
+  --color-link: hsl(221, 100%, 70%);
+  --color-link-hover: hsl(221, 100%, 61%);
 
-    --color-error: hsl(0, 70%, 55%);
-    --color-success: hsl(160, 70%, 50%);
-    --color-warning: hsl(40, 95%, 58%);
+  --color-error: hsl(0, 70%, 55%);
+  --color-success: hsl(160, 70%, 50%);
+  --color-warning: hsl(40, 95%, 58%);
 
-    --color-footer-bg: hsl(222, 30%, 4%);
-    --color-footer-hover: hsl(210, 20%, 90%);
+  --color-footer-bg: hsl(222, 30%, 4%);
+  --color-footer-hover: hsl(210, 20%, 90%);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Space Grotesk', sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 :root {
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 [data-theme="light"] {
-    color-scheme: light;
+  color-scheme: light;
 
-    --color-background: hsl(214, 24%, 93%);
-    --color-surface: hsl(0, 0%, 100%);
-    --color-surface-alt: hsl(214, 22%, 89%);
-    --color-border: hsl(214, 18%, 78%);
-    --color-border-alt: hsl(214, 16%, 66%);
+  --color-background: hsl(214, 24%, 93%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-surface-alt: hsl(214, 22%, 89%);
+  --color-border: hsl(214, 18%, 78%);
+  --color-border-alt: hsl(214, 16%, 66%);
 
-    --color-gray-text: hsl(220, 10%, 38%);
-    --color-gray-light: hsl(220, 12%, 38%);
+  --color-gray-text: hsl(220, 10%, 38%);
+  --color-gray-light: hsl(220, 12%, 38%);
 
-    --color-text: hsl(222, 25%, 14%);
-    --color-text-secondary: hsl(220, 15%, 28%);
-    --color-text-tertiary: hsl(220, 12%, 36%);
+  --color-text: hsl(222, 25%, 14%);
+  --color-text-secondary: hsl(220, 15%, 28%);
+  --color-text-tertiary: hsl(220, 12%, 36%);
 
-    --color-heading: hsl(222, 35%, 8%);
+  --color-heading: hsl(222, 35%, 8%);
 
-    --color-primary: hsl(221, 85%, 50%);
-    --color-primary-hover: hsl(221, 90%, 42%);
+  --color-primary: hsl(221, 85%, 50%);
+  --color-primary-hover: hsl(221, 90%, 42%);
 
-    --color-accent: hsl(195, 90%, 32%);
-    --color-accent-hover: hsl(195, 90%, 26%);
-    --color-accent-light: hsl(190, 70%, 92%);
+  --color-accent: hsl(195, 90%, 32%);
+  --color-accent-hover: hsl(195, 90%, 26%);
+  --color-accent-light: hsl(190, 70%, 92%);
 
-    --color-link: hsl(221, 85%, 45%);
-    --color-link-hover: hsl(221, 90%, 36%);
+  --color-link: hsl(221, 85%, 45%);
+  --color-link-hover: hsl(221, 90%, 36%);
 
-    --color-error: hsl(0, 70%, 45%);
+  --color-error: hsl(0, 70%, 45%);
 
-    --color-footer-bg: hsl(214, 25%, 90%);
-    --color-footer-hover: hsl(222, 30%, 15%);
+  --color-footer-bg: hsl(214, 25%, 90%);
+  --color-footer-hover: hsl(222, 30%, 15%);
 
-    --color-success: hsl(160, 80%, 25%);
-    --color-warning: hsl(35, 90%, 30%);
+  --color-success: hsl(160, 80%, 25%);
+  --color-warning: hsl(35, 90%, 30%);
 }
 
 @font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('../assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('../assets/fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('../assets/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'IBM Plex Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('../assets/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/IBMPlexMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'IBM Plex Mono';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('../assets/fonts/IBMPlexMono-Medium.ttf') format('truetype');
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/IBMPlexMono-Medium.ttf") format("truetype");
 }
 
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+@keyframes flutuar-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(8vw, 6vh) scale(1.15);
+  }
+}
+
+@keyframes flutuar-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-7vw, -8vh) scale(1.1);
+  }
+}
+
+@keyframes flutuar-c {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1.05);
+  }
+  50% {
+    transform: translate(-5vw, 7vh) scale(0.9);
+  }
+}
+
+.mancha-a {
+  animation: flutuar-a 22s ease-in-out infinite;
+  will-change: transform;
+}
+.mancha-b {
+  animation: flutuar-b 26s ease-in-out infinite;
+  will-change: transform;
+}
+.mancha-c {
+  animation: flutuar-c 30s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.anel-luz {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    var(--color-primary) 120deg,
+    var(--color-accent) 240deg,
+    transparent 360deg
+  );
+  animation: girar 6s linear infinite;
+}
+
+.anel-luz::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(14px);
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mancha-a,
+  .mancha-b,
+  .mancha-c,
+  .anel-luz {
+    animation: none;
+  }
+}
+
+[data-theme="light"] .manchas {
+  opacity: 0.8;
 }

@@ -26,14 +26,23 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="flex flex-col sm:flex-row items-center gap-8 sm:gap-24 pt-48 sm:pt-0 min-h-screen px-6 sm:px-12 bg-surface text-center sm:text-left"
+      className="relative isolate overflow-hidden flex flex-col sm:flex-row items-center gap-8 sm:gap-24 pt-48 sm:pt-0 min-h-screen px-6 sm:px-12 bg-surface text-center sm:text-left"
     >
-      <div className="w-40 h-40 sm:w-64 sm:h-64 rounded-full overflow-hidden shrink-0">
-        <img
-          src={minhaFoto}
-          alt="Foto de Maicon Casagranda"
-          className="w-full h-full object-cover"
-        />
+      <div aria-hidden="true" className="manchas pointer-events-none absolute inset-0 -z-10">
+        <div className="mancha-a absolute -top-16 -left-16 w-72 h-72 sm:w-[28rem] sm:h-[28rem] rounded-full bg-primary/30 blur-3xl" />
+        <div className="mancha-b absolute -bottom-20 -right-10 w-72 h-72 sm:w-[30rem] sm:h-[30rem] rounded-full bg-accent/25 blur-3xl" />
+        <div className="mancha-c absolute top-1/3 right-1/3 w-56 h-56 sm:w-80 sm:h-80 rounded-full bg-primary/20 blur-3xl" />
+      </div>
+
+      <div className="relative w-40 h-40 sm:w-64 sm:h-64 shrink-0">
+        <div aria-hidden="true" className="anel-luz absolute -inset-1 rounded-full" />
+        <div className="relative w-full h-full rounded-full overflow-hidden">
+          <img
+            src={minhaFoto}
+            alt="Foto de Maicon Casagranda"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
 
       <div>
